@@ -1,0 +1,28 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.inputBasicInfo {
+  width: 100px;
+}
+
+.inputStatus {
+  width: 35px;
+}
+
+.footer {
+  background-color: #f4f4f4;
+}
