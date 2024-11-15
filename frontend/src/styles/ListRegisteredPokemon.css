@@ -1,0 +1,14 @@
+.ListRegisteredPokemon {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fafafa;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+  color: #212121;
+  text-decoration: none;
+  width: 30%;
+  cursor: pointer;
+  margin: 1.6%;
+}
