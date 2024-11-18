@@ -1,8 +1,10 @@
 import React from "react";
-import _ from "lodash";
 import "../styles/ListRegisteredPokemon.css";
 
-export default function Navbar({ registeredPokemons, selectPokemon }) {
+export default function ListRegisteredPokemons({
+  registeredPokemons,
+  selectPokemon,
+}) {
   return (
     <div className="ListRegisteredPokemon">
       {registeredPokemons.map((registeredPokemon, i) => {
