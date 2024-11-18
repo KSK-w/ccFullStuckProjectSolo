@@ -1,14 +1,18 @@
 import React from "react";
 import "../styles/navbar.css";
-import _ from "lodash";
 
 export default function Navbar({ returnHome, goAddPokemonPage }) {
   return (
     <div className="navbar">
-      <button onClick={returnHome} className="navbar-header">
-        ホーム
-      </button>
-      <button onClick={goAddPokemonPage} className="navbar-header">
+      <img
+        src="/header.png"
+        alt="homeimage"
+        width="150"
+        onClick={returnHome}
+        className="home-image"
+      />
+      <button onClick={goAddPokemonPage} className="add-button">
+        <img src="/logo192.png" className="button-icon" alt="monsterball" />
         ポケモンの追加
       </button>
     </div>

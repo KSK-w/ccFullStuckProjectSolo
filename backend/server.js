@@ -21,8 +21,7 @@ app.use("/api/health", healthCheckRoutes);
 //getでポケモンの情報を返す
 app.get("/api/pokemons", async (req, res) => {
   try {
-    const pokemons = await knex("pokemons").select("*");
-    console.log(pokemons);
+    const pokemons = await knex("pokemons").select("*").orderBy("id");
     res.status(200).json(pokemons);
   } catch (err) {
     console.log(err.stack);
@@ -34,12 +33,35 @@ app.get("/api/pokemons", async (req, res) => {
 app.post("/api/pokemons", async (req, res) => {
   try {
     const result = await knex("pokemons").insert(req.body);
-    const pokemons = await knex("pokemons").select("*");
-    console.log(pokemons);
     res.status(200).json({ message: "Succeed to register pokemon" });
   } catch (err) {
     console.log(err.stack);
     res.status(500).json({ error: "Failed to register pokemon" });
+  }
+});
+
+//deleteでポケモンの情報を登録する
+app.delete("/api/pokemons", async (req, res) => {
+  try {
+    const { id } = req.body;
+    console.log(id);
+    const result = await knex("pokemons").where({ id: id }).del();
+    res.status(200).json({ message: "Succeed to register pokemon" });
+  } catch (err) {
+    console.log(err.stack);
+    res.status(500).json({ error: "Failed to register pokemon" });
+  }
+});
+
+//updateでポケモンの情報を更新する
+app.patch("/api/pokemons", async (req, res) => {
+  try {
+    const { id } = req.body;
+    const result = await knex("pokemons").where({ id: id }).update(req.body);
+    res.status(200).json({ message: "Succeed to update pokemon" });
+  } catch (err) {
+    console.log(err.stack);
+    res.status(500).json({ error: "Failed to update pokemon" });
   }
 });
 

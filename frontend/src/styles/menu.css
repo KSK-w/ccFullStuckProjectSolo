@@ -1,0 +1,49 @@
+/*メニュー内のスタイル*/
+.bm-menu {
+  background: linear-gradient(135deg, #ff4c4c, #ff7b7b);
+  padding: 2em 1.5em 0;
+  font-size: 1.15em;
+  color: #fff;
+}
+
+.menu-item {
+  display: block;
+  text-decoration: none;
+  margin: 1em 0;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* メニューボタン（ハンバーガー）のスタイル */
+.bm-burger-button {
+  position: fixed;
+  width: 30px;
+  height: 26px;
+  left: 20px;
+  top: 19px;
+  z-index: 1000;
+}
+
+.bm-burger-bars {
+  background: #fff;
+  border-radius: 5px;
+}
+
+.bm-burger-bars-hover {
+  background: #ff7b7b;
+}
+
+/* オーバーレイのスタイル */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.5); /* 半透明の黒 */
+}
+.menu-item:hover {
+  color: #fffbe6;
+  transform: scale(1.1);
+}
+
+#page-wrap {
+  transition: transform 0.5s ease;
+}
