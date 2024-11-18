@@ -1,8 +1,4 @@
-import React, { useCallback, useState, useEffect } from "react";
 import "../styles/about.css";
-
-import Home from "./Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function about({}) {
   return (
